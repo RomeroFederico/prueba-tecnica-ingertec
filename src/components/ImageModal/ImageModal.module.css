@@ -1,0 +1,16 @@
+.container {
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  background-color: rgba(0, 0, 0, 0.9);
+  z-index: 100;
+}
+
+.image {
+  max-height: 100%;
+}

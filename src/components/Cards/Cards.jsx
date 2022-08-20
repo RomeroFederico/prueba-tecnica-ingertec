@@ -14,6 +14,8 @@ export default function Cards() {
           imageSrc = {image.src}
           title = {image.title}
           description = {image.description}
+          isPopup = {index % 2 === 0}
+          isModal = {index % 2 === 1}
           key = {`image-card-${image.title}-${index}`}
         />
       )
