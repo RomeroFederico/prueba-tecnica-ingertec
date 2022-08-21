@@ -1,4 +1,5 @@
 import React from 'react';
+import { FileEarmarkImageFill } from 'react-bootstrap-icons';
 import Card from 'react-bootstrap/Card';
 
 import s from './ImageLoader.module.css';
@@ -44,6 +45,14 @@ export default function ImageLoader({ src, alt }) {
         onLoad = {handleLoadImage} 
         className = {`${s.img} ${ !showImage || delay ? s.dontShowImage : '' }`}
       />
+    }
+    { 
+      errorLoading && !delay &&
+      <div className = {s.loadingContainer}>
+        <div className = {s.svgContainer}>
+          <FileEarmarkImageFill size = {50}/>
+        </div>
+      </div>
     }
     </div> 
   );
