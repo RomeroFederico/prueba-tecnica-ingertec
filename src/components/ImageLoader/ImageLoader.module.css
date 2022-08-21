@@ -1,0 +1,20 @@
+.wrapper {
+  overflow: hidden;
+}
+
+.img {
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+}
+
+.dontShowImage {
+  display: none;
+}
+
+.loadingContainer {
+  aspect-ratio:  3 / 2;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

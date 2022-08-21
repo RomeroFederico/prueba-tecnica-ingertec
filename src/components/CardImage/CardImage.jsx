@@ -1,7 +1,8 @@
 import React from 'react';
 import Card from 'react-bootstrap/Card';
-import { EyeFill } from 'react-bootstrap-icons';
+import { ChatLeftQuote, ChatRightQuote, EyeFill, Quote } from 'react-bootstrap-icons';
 import ImageModal from '../ImageModal/ImageModal';
+import ImageLoader from '../ImageLoader/ImageLoader';
 import s from './CardImage.module.css';
 
 export default function CardImage({ imageSrc, title, description, isPopup = false, isModal = false }) {
@@ -28,7 +29,7 @@ export default function CardImage({ imageSrc, title, description, isPopup = fals
     newPopup.addEventListener("message", (response) => {
       if (response.origin !== window.location.origin || !response.data.showImagePopup) return;
 
-      if (response.data.view) setViews(views => views + 1);
+      if (response.data.view) handleView();
       if (response.data.close) { 
         newPopup.close();
         setPopup(null);
@@ -48,15 +49,17 @@ export default function CardImage({ imageSrc, title, description, isPopup = fals
   }
 
   let handleView = function() {
-    setViews(views + 1);
+    setViews(views => views + 1);
   }
 
   return (
     <>
     <Card className = {s.card} onClick = {handleChooseOption}>
-      <Card.Img variant = 'top' src = {imageSrc} alt = {title} className = {s.img}/>
-      <Card.Body className = {`small text-center fst-italic`}>
-        <Card.Text>{description}</Card.Text>
+      <ImageLoader src = {imageSrc} alt = {title} />
+      <Card.Body className = {`small text-center fst-italic d-flex align-items-center justify-content-between flex-column`}>
+        <Quote size = {20} className = {"align-self-start"}/>
+        <Card.Text className = {s.description}>{description}</Card.Text>
+        <Quote className = {`${s.rightQuote} align-self-end`} size = {20}/>
       </Card.Body>
       <Card.Footer className = {`small ${s.footer}`}>
         <small className = {"fw-bold"}>{views}</small>

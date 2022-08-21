@@ -1,5 +1,6 @@
 .card {
   width: 90%;
+  overflow: hidden;
 }
 
 .img {
@@ -17,4 +18,13 @@
   grid-column-gap: 0.5rem;
   justify-content: right;
   align-items: center;
+}
+
+.rightQuote {
+  transform: rotate(180deg);
+}
+
+.description {
+  padding: 0;
+  margin: 0;
 }
