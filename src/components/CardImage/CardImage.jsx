@@ -1,8 +1,9 @@
 import React from 'react';
 import Card from 'react-bootstrap/Card';
-import { ChatLeftQuote, ChatRightQuote, EyeFill, Quote } from 'react-bootstrap-icons';
+import { EyeFill, Quote } from 'react-bootstrap-icons';
 import ImageModal from '../ImageModal/ImageModal';
 import ImageLoader from '../ImageLoader/ImageLoader';
+
 import s from './CardImage.module.css';
 
 export default function CardImage({ imageSrc, title, description, isPopup = false, isModal = false }) {
@@ -24,7 +25,9 @@ export default function CardImage({ imageSrc, title, description, isPopup = fals
   let openPopup = function() {
     let newPopup = window.open('/popup', title,'height=400,width=800');
     newPopup.cardData = { imageSrc, title };
-    newPopup.onload = function() { this.document.title = title; }
+    newPopup.onload = function() { 
+      this.document.title = title;
+    }
 
     newPopup.addEventListener("message", (response) => {
       if (response.origin !== window.location.origin || !response.data.showImagePopup) return;

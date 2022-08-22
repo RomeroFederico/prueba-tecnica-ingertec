@@ -1,6 +1,5 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import Image from 'react-bootstrap/Image';
 import Button from 'react-bootstrap/Button';
 
 import s from './ImagePopup.module.css';
@@ -17,6 +16,9 @@ export default function ImagePopup() {
     else {
       setIsPopup(true);
       setImageData({ ...window.cardData });
+      window.opener.addEventListener('unload', (event) => {
+        window.close();
+      });
     }
   }, []);
 
