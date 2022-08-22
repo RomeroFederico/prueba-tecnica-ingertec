@@ -4,7 +4,6 @@ import Button from 'react-bootstrap/Button'
 import { ExclamationTriangleFill } from 'react-bootstrap-icons';
 
 import s from './TextAreaLoad.module.css';
-import { Collapse, FormLabel } from 'react-bootstrap';
 
 export default function TextAreaLoad() {
 

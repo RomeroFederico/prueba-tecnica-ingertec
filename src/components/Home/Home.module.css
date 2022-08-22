@@ -1,3 +1,5 @@
 .title {
-  margin-bottom: 1rem;
+  margin-top: 2rem;
+  margin-bottom: 3rem;
+  color: var(--bs-primary);
 }

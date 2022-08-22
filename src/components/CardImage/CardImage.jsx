@@ -57,8 +57,8 @@ export default function CardImage({ imageSrc, title, description, isPopup = fals
 
   return (
     <>
-    <Card className = {s.card} onClick = {handleChooseOption}>
-      <ImageLoader src = {imageSrc} alt = {title} />
+    <Card className = {s.card}>
+      <ImageLoader src = {imageSrc} alt = {title} handleOnClick = {handleChooseOption}/>
       <Card.Body className = {`small text-center fst-italic d-flex align-items-center justify-content-between flex-column`}>
         <Quote size = {20} className = {"align-self-start"}/>
         <Card.Text className = {s.description}>{description}</Card.Text>

@@ -1,0 +1,24 @@
+.btnScrollToTop {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+}
+
+.hide {
+  display: none !important;
+}
+
+.show {
+  display: flex !important;
+  animation: showBtn 0.5s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes showBtn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

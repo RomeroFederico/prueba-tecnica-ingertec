@@ -11,10 +11,16 @@
   display: none;
 }
 
+.errorContainer,
 .loadingContainer {
   aspect-ratio:  3 / 2;
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.errorContainer,
+.img {
+  cursor: pointer;
 }

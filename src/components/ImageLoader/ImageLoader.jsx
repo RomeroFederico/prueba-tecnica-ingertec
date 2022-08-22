@@ -4,7 +4,7 @@ import Card from 'react-bootstrap/Card';
 
 import s from './ImageLoader.module.css';
 
-export default function ImageLoader({ src, alt }) {
+export default function ImageLoader({ src, alt, handleOnClick }) {
 
   const [ errorLoading, setErrorLoading ] = React.useState(false);
   const [ showImage, setShowImage ] = React.useState(false);
@@ -44,11 +44,12 @@ export default function ImageLoader({ src, alt }) {
         onError = {handleErrorImageNotFound}
         onLoad = {handleLoadImage} 
         className = {`${s.img} ${ !showImage || delay ? s.dontShowImage : '' }`}
+        onClick = {handleOnClick}
       />
     }
     { 
       errorLoading && !delay &&
-      <div className = {s.loadingContainer}>
+      <div className = {s.errorContainer} onClick = {handleOnClick}>
         <div className = {s.svgContainer}>
           <FileEarmarkImageFill size = {50}/>
         </div>
