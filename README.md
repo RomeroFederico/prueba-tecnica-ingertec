@@ -25,3 +25,13 @@ Para finalizar e iniciar la pagina:
 npm start
 ```
 ## Imagenes
+![screenshot 1](./sample/screenshot_1.png)
+
+
+![screenshot 2](./sample/screenshot_2.png)
+
+
+![screenshot 3](./sample/screenshot_3.png)
+
+
+![screenshot 4](./sample/screenshot_4.png)
