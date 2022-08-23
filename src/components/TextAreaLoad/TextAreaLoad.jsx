@@ -2,6 +2,7 @@ import React from 'react';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button'
 import { ExclamationTriangleFill } from 'react-bootstrap-icons';
+import { jsonFile } from '../../util/config';
 
 import s from './TextAreaLoad.module.css';
 
@@ -34,7 +35,7 @@ export default function TextAreaLoad() {
         else setError(true);
       }
     };
-    httpRequest.open('GET', "http://localhost:3001/public/json/home.json");
+    httpRequest.open('GET', jsonFile);
     httpRequest.send();
   }
 

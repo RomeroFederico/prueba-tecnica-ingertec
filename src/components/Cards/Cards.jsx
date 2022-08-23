@@ -1,6 +1,6 @@
 import React from 'react';
 import CardImage from '../CardImage/CardImage';
-import { images } from '../../util/data';
+import { images } from '../../util/config';
 import s from './Cards.module.css';
 
 export default function Cards() {
