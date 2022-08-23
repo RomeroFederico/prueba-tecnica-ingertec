@@ -14,3 +14,18 @@
   justify-items: center;
   align-content: center;
 }
+
+.links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.links > a {
+  text-decoration: none;
+}
+
+.links > svg {
+  cursor: pointer;
+}
