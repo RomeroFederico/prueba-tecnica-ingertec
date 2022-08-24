@@ -27,7 +27,7 @@ npm start
 En caso de estar utilizando el servidor de manera local, modificar el archivo `src/util/config.js` (desde el directorio raiz):
  ```javascript
 //export const SERVER_STATIC_PATH = "https://prueba-tecnica-ingertec-api.herokuapp.com/public";
-export const SERVER_STATIC_PATH = "https://localhost:3001/public"; // 👈 Puerto indicado en el servidor.
+export const SERVER_STATIC_PATH = "http://localhost:3001/public"; // 👈 Puerto indicado en el servidor.
 ```
 
 ## Imagenes

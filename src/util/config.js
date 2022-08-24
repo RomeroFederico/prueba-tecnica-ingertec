@@ -1,5 +1,5 @@
 export const SERVER_STATIC_PATH = "https://prueba-tecnica-ingertec-api.herokuapp.com/public";
-//export const SERVER_STATIC_PATH = "https://localhost:3001/public";
+//export const SERVER_STATIC_PATH = "http://localhost:3001/public";
 
 export const jsonFile = `${SERVER_STATIC_PATH}/json/home.json`;
 
